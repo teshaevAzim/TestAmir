@@ -1,11 +1,10 @@
 import requests
-import settings
 import datetime
 from telegram.ext import Updater, CallbackContext, CommandHandler, Dispatcher, CallbackQueryHandler
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.update import Update
 
-updater = Updater(token=settings.API_TOKEN)
+updater = Updater(token="")
 dispatcher: Dispatcher = updater.dispatcher
 
 keyboard = [
