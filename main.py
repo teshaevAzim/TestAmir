@@ -4,7 +4,7 @@ from telegram.ext import Updater, CallbackContext, CommandHandler, Dispatcher, C
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.update import Update
 
-updater = Updater(token="")
+updater = Updater(token="5245421544:AAH8KJL3QaJxSSEfuBU1ysI0W3HpfHa5J0c")
 dispatcher: Dispatcher = updater.dispatcher
 
 keyboard = [
@@ -51,8 +51,8 @@ def callback_handler(update: Update, context: CallbackContext):
             temp = data['main']['temp']
             wind_speed = data['wind']['speed']
             ob_havo = data['weather'][0]['main']
-            if ob_havo in settings.code_smiles_uz:
-                wd = settings.code_smiles_uz[ob_havo]
+            if ob_havo in code_smiles_uz:
+                wd = code_smiles_uz[ob_havo]
             else:
                 wd = f"{ob_havo}"
             query.edit_message_text(
